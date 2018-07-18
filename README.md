@@ -27,6 +27,12 @@
 ### 个人爱好
 
 
+body
+{ font-family: "微软雅黑", Helvetica, "微软雅黑", Arial, sans-serif;
+font-size: 13px; line-height: 18px; 
+color: #737373; margin: 10px 13px 10px 13px; 
+} 
+
 
 
 
