@@ -125,65 +125,64 @@
 						</header>
 						<div class="post-body js-gallery">
 						<p>	
-1. .NET和C#有什么区别
+1. .NET和C#有什么区别</br>
+答：.NET一般指 .NET FrameWork框架，它是一种平台，一种技术。	</br>						
+C#是一种编程语言，可以基于.NET平台的应用。</br>
+							</br>
 
-答：.NET一般指 .NET FrameWork框架，它是一种平台，一种技术。
+2．一列数的规则如下: 1、1、2、3、5、8、13、21、34...... 求第30位数是多少，用递归算法实现。</br>
+答：public class MainClass </br>
+                 { </br>
+                 public static void Main() </br>
+                 { </br>
+                 Console.WriteLine(Foo(30)); </br>
+                 } </br>
+                 public static int Foo(int i) </br>
+                 { </br>
+                 if (i <= 0) </br>
+                 return 0; </br>
+                 else if(i > 0 && i <= 2) </br>
+                 return 1; </br>
+                 else return Foo(i -1) + Foo(i - 2); </br>
+                 } </br>
+                 }</br>
+</br>
+3. C#中的委托是什么？事件是不是一种委托？</br>
+答 : 委托可以把一个方法作为参数代入另一个方法。</br>
+                 委托可以理解为指向一个函数的引用。</br>
+                 是，是一种特殊的委托</br>
+</br>
+4. 简述 private、 protected、 public、internal 修饰符的访问权限。</br>
 
-C#是一种编程语言，可以基于.NET平台的应用。
+答 . private : 私有成员, 在类的内部才可以访问。</br>
 
-2．一列数的规则如下: 1、1、2、3、5、8、13、21、34...... 求第30位数是多少，用递归算法实现。
-答：public class MainClass 
-                 { 
-                 public static void Main() 
-                 { 
-                 Console.WriteLine(Foo(30)); 
-                 } 
-                 public static int Foo(int i) 
-                 { 
-                 if (i <= 0) 
-                 return 0; 
-                 else if(i > 0 && i <= 2) 
-                 return 1; 
-                 else return Foo(i -1) + Foo(i - 2); 
-                 } 
-                 }
+protected: 保护成员，该类内部和继承类中可以访问。</br>
 
-3. C#中的委托是什么？事件是不是一种委托？
-答 : 委托可以把一个方法作为参数代入另一个方法。
-                 委托可以理解为指向一个函数的引用。
-                 是，是一种特殊的委托
+public: 公共成员，完全公开，没有访问限制。</br>
 
-4. 简述 private、 protected、 public、internal 修饰符的访问权限。
+internal:在同一命名空间内可以访问。</br>
 
-答 . private : 私有成员, 在类的内部才可以访问。
+5. override与重载的区别</br>
 
-protected: 保护成员，该类内部和继承类中可以访问。
+答 ：override 与重载的区别。重载是方法的名称相同。参数或参数类型不同，进行多</br>
 
-public: 公共成员，完全公开，没有访问限制。
+次重载以适应不同的需要</br>
 
-internal:在同一命名空间内可以访问。
+Override是进行基类中函数的重写。为了适应需要。</br>
 
-5. override与重载的区别
+6.如果在一个B/S结构的系统中需要传递变量值，但是又不能使用Session、Cookie、Application，您有几种方法进行处理？</br>
+答 ：   this.Server.Transfer</br>
 
-答 ：override 与重载的区别。重载是方法的名称相同。参数或参数类型不同，进行多
-
-次重载以适应不同的需要
-
-Override是进行基类中函数的重写。为了适应需要。
-
-6.如果在一个B/S结构的系统中需要传递变量值，但是又不能使用Session、Cookie、Application，您有几种方法进行处理？
-答 ：   this.Server.Transfer
-
-7. 请编程遍历页面上所有TextBox控件并给它赋值为string.Empty？
+7. 请编程遍历页面上所有TextBox控件并给它赋值为string.Empty？</br>
 答：
-foreach (System.Windows.Forms.Control control in this.Controls)
+foreach (System.Windows.Forms.Control control in this.Controls)</br>
+{</br>
+if (control is System.Windows.Forms.TextBox)</br>
 {
-if (control is System.Windows.Forms.TextBox)
-{
-System.Windows.Forms.TextBox tb = (System.Windows.Forms.TextBox)control ; 
-tb.Text = String.Empty ;
-}
-}
+System.Windows.Forms.TextBox tb = (System.Windows.Forms.TextBox)control ; </br>
+tb.Text = String.Empty ;</br>
+}</br>
+}</br>
 
 8. 请编程实现一个冒泡排序算法？
 答：
